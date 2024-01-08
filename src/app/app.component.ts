@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Hero } from './hero.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'real-time-example';
+  selectedHero: Hero | undefined;
+
+  onHeroSelected(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }
